@@ -219,10 +219,10 @@ resource "aws_instance" "my-ec2" {
       "sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd",
       "rm argocd-linux-amd64", 
 
-      # Install Java 17
-      # Ref: https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
+      # Install Java 21
+      # Ref: https://www.rosehosting.com/blog/how-to-install-java-21-on-ubuntu/
       "sudo apt update -y",
-      "sudo apt install openjdk-17-jdk openjdk-17-jre -y",
+      "sudo apt install openjdk-21-jdk openjdk-21-jre -y",
       "java -version",
 
       # Install Jenkins

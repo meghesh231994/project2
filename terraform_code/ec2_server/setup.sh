@@ -36,10 +36,10 @@ echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.
 sudo apt-get update -y
 sudo apt-get install trivy -y
 
-# Install Java 17
-# REF: https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
+# Install Java 21
+# REF: https://www.rosehosting.com/blog/how-to-install-java-21-on-ubuntu/
 sudo apt update -y
-sudo apt install openjdk-17-jdk openjdk-17-jre -y
+sudo apt install openjdk-21-jdk openjdk-21-jre -y
 java -version
 
 # Install Jenkins
