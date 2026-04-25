@@ -45,11 +45,12 @@ java -version
 # Install Jenkins
 # REF: https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo mkdir -p /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 
-sudo apt update -y                                   # to update package
-sudo apt install jenkins -y                          # to install jenkins
+sudo apt update -y
+sudo apt install jenkins -y
 
 sudo systemctl start jenkins                         # to start jenkins service
 # sudo systemctl status jenkins                        # to check the status if jenkins is running or not
