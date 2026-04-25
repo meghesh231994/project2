@@ -1,0 +1,10 @@
+# Terraform providers and plugins (large binaries)
+.terraform/
+*.exe
+
+# Terraform state files (contain sensitive data)
+terraform.tfstate
+terraform.tfstate.backup
+
+# SSH private keys
+*.pem
