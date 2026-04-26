@@ -12,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 3000
   selector:
-    app: pandacloud-app
+    app: meg-app
   type: LoadBalancer
 ...
