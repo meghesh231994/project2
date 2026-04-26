@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pandacloud-app
+  name: meg-app
   labels:
-    app: pandacloud-app
+    app: meg-app
 spec:
   ports:
   - name: http

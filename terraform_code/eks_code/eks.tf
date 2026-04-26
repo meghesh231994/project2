@@ -1,6 +1,6 @@
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "19.15.1"
+  version = "20.31.6"
 
   cluster_name                   = local.name
   cluster_endpoint_public_access = true
@@ -19,6 +19,9 @@ module "eks" {
 
   vpc_id                   = module.vpc.vpc_id
   subnet_ids               = module.vpc.private_subnets
+
+  # Enable cluster creator admin permissions
+  # enable_cluster_creator_admin_permissions = true
 
   eks_managed_node_groups = {
     panda-node = {

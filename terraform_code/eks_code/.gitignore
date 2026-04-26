@@ -1,0 +1,7 @@
+# Terraform providers and plugins
+.terraform/
+*.exe
+
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
