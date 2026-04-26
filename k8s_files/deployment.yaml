@@ -16,8 +16,9 @@ spec:
         app: meg-app
     spec:
       containers:
-      - name: meg-container
-        image: 043509840958.dkr.ecr.ap-southeast-2.amazonaws.com/amazon-prime:latest
-        ports:
-        - containerPort: 3000
+        - name: meg-container
+          image: 043509840958.dkr.ecr.ap-southeast-2.amazonaws.com/amazon-prime:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
 ...
